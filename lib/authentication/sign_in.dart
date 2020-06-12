@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:time_tracker/authentication/auth.dart';
 import 'package:time_tracker/authentication/sign_in_buttons.dart';
+import 'package:time_tracker/authentication/sing_in_with_email.dart';
 import 'package:time_tracker/common_widgets/custom_raised_button.dart';
 
 class SignInPage extends StatelessWidget {
@@ -9,15 +10,26 @@ class SignInPage extends StatelessWidget {
   final AuthBase auth;
   Future<void> _signInAnonymously() async {
     try {
-       await auth.signInAnonymously();
-
-     // print("${authResult.user}");
+      await auth.signInAnonymously();
     } catch (e) {
       print('${e.toString()}');
     }
   }
 
+  Future<void> _signInWithGoogle() async {
+    try {
+      await auth.signInWithGoogle();
+    } catch (e) {
+      print('${e.toString()}');
+    }
+  }
 
+  void _signInWithEmail(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute<void>(
+      builder: (context) => EmailSignIn(auth: auth),
+      fullscreenDialog: true,
+    ));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,11 +37,11 @@ class SignInPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Time Tracker'),
       ),
-      body: _buildContent(),
+      body: _buildContent(context),
     );
   }
 
-  Widget _buildContent() {
+  Widget _buildContent(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(
@@ -73,7 +85,9 @@ class SignInPage extends StatelessWidget {
               ],
             ),
             color: Colors.white,
-            onPressed: () {},
+            onPressed: () {
+              _signInWithGoogle();
+            },
           ),
           SizedBox(
             height: 8.0,
@@ -113,7 +127,9 @@ class SignInPage extends StatelessWidget {
             text: 'Sign in with Email',
             textColor: Colors.white,
             color: Colors.teal[800],
-            onPressed: () {},
+            onPressed: () {
+              _signInWithEmail(context);
+            },
           ),
           SizedBox(
             height: 8.0,

@@ -40,5 +40,4 @@ class LandingPage extends StatelessWidget {
 
 
 
-
 }
