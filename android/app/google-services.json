@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "343971708588",
+    "firebase_url": "https://timetracker-23784.firebaseio.com",
+    "project_id": "timetracker-23784",
+    "storage_bucket": "timetracker-23784.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343971708588:android:d09a77ee791b5bfa3ea909",
+        "android_client_info": {
+          "package_name": "com.example.time_tracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343971708588-u61qa821s2nqdrvh23572cqn0rjril2o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.time_tracker",
+            "certificate_hash": "66377a567d6297b938249971254072dcf50d68c3"
+          }
+        },
+        {
+          "client_id": "343971708588-obgm2pnoa3bu928h6jboffpha4kps4fg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwwunS5KlZRM4a7so1BwjltFQ_rki7Axw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343971708588-obgm2pnoa3bu928h6jboffpha4kps4fg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
