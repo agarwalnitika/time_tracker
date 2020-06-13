@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:time_tracker/authentication/auth.dart';
 import 'package:time_tracker/authentication/sign_in_buttons.dart';
-import 'package:time_tracker/authentication/sing_in_with_email.dart';
+import 'package:time_tracker/authentication/sign_in_with_email.dart';
 import 'package:time_tracker/common_widgets/custom_raised_button.dart';
 
 class SignInPage extends StatelessWidget {

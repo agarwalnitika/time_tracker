@@ -17,10 +17,12 @@ class _EmailSignInState extends State<EmailSignIn> {
       appBar: AppBar(
         title: Text('Sign In'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Card(
-          child: EmailSignInForm(auth: widget.auth),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Card(
+            child: EmailSignInForm(auth: widget.auth),
+          ),
         ),
       ),
       backgroundColor: Colors.grey[200],
