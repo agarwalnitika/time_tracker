@@ -1,6 +1,7 @@
 # time_tracker
 
-A new Flutter application.
+A new Flutter application to track job entries and time scheduler
+
 
 ## Getting Started
 
